@@ -1,6 +1,8 @@
 function showDialog() {
     let noteEditorDOM = document.getElementById('note-editor');
     noteEditorDOM.value = '';
+    let saveButtonDOM = document.getElementById('saveButton');
+    saveButtonDOM.disabled = true;
     let dialogBoxDOM = document.getElementById('dialogBox');
     dialogBoxDOM.classList.remove('hide');
 }
@@ -15,6 +17,17 @@ function saveNote() {
     let noteValue = noteEditorDOM.value;
     addNoteToNoteList(noteValue);
     hideDialog();
+}
+
+function onEditorChange() {
+    let noteEditorDOM = document.getElementById('note-editor');
+    let noteValue = noteEditorDOM.value;
+    let saveButtonDOM = document.getElementById('saveButton');
+    if (noteValue) {
+        saveButtonDOM.disabled = false;
+    } else {
+        saveButtonDOM.disabled = true;
+    }
 }
 
 function addNoteToNoteList(noteValue) {

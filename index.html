@@ -37,10 +37,10 @@
                 <button class="button-dismiss" onclick="hideDialog()"><i class="bi bi-x-lg"></i></button>
             </div>
             <div class="modal-content">
-                <textarea id="note-editor" placeholder="Type your note here..."></textarea>
+                <textarea id="note-editor" placeholder="Type your note here..." oninput="onEditorChange()"></textarea>
                 <div class="modal-footer">
                     <button class="button-secondary" onclick="hideDialog()">Cancel</button>
-                    <button onclick="saveNote()">Save</button>
+                    <button id="saveButton" onclick="saveNote()">Save</button>
                 </div>
             </div>
         </div>

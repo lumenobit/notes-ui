@@ -34,6 +34,12 @@ button {
     cursor: pointer;
 }
 
+button:disabled {
+    background-color: #9f9f9f !important;
+    border: 1px solid #9f9f9f !important;
+    cursor: not-allowed;
+}
+
 .button-icon {
     position: fixed;
     bottom: 20px;
