@@ -1,3 +1,3 @@
-# javascript-basic-2.
+# Notes APP (UI)
 
-Demo - https://lumenobit.github.io/javascript-basic-2/
+Demo - https://lumenobit.github.io/notes-ui/
