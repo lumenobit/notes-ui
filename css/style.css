@@ -4,10 +4,31 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background-color: #222;
     color: #fff;
+}
+
+header h1 {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+header a {
+    color: #fff;
+}
+
+header a:hover {
+    color: #e2e2e2;
 }
 
 .note-list {
@@ -23,6 +44,14 @@ header {
     margin-bottom: 20px;
     padding: 10px 20px;
     border-radius: 4px;
+    word-break: break-word;
+}
+
+@media (max-width: 376px) {
+    .note {
+        width: 100%;
+        margin-right: 0;
+    }
 }
 
 button {
@@ -88,6 +117,7 @@ button:hover {
     transform: translate(-50%, -50%);
     height: 250px;
     width: 450px;
+    max-width: 90%;
     border-radius: 4px;
     overflow: hidden;
     -webkit-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
@@ -107,6 +137,7 @@ button:hover {
 .modal-title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
     background-color: #444;
     color: #fff;
