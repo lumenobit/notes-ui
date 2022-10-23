@@ -163,6 +163,21 @@ button:hover {
     border-radius: 4px;
 }
 
+#note-editor.invalid {
+    border: 1px solid #ff2323;
+}
+
+#note-editor~span {
+    display: none;
+    font-size: 0.7em;
+    position: absolute;
+    color: #ff2323;
+}
+
+#note-editor.invalid+span {
+    display: block;
+}
+
 .modal-footer {
     margin-top: 6px;
     text-align: right;

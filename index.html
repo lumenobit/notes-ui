@@ -52,7 +52,9 @@
                 <button class="button-dismiss" onclick="hideDialog()"><i class="bi bi-x-lg"></i></button>
             </div>
             <div class="modal-content">
-                <textarea id="note-editor" placeholder="Type your note here..." oninput="onEditorChange()"></textarea>
+                <textarea id="note-editor" placeholder="Type your note here..." onfocus="removePlaceholder()"
+                    onblur="isValid()" oninput="onEditorChange()"></textarea>
+                <span>Note cannot be empty.</span>
                 <div class="modal-footer">
                     <button class="button-secondary" onclick="hideDialog()">Cancel</button>
                     <button id="saveButton" onclick="saveNote()">Save</button>
